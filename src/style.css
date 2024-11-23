@@ -1,0 +1,16 @@
+.outer {
+   background-color: lavender;
+}
+.inner {
+   background-color: beige;
+   border: 1px solid transparent;
+   border-radius: 20px;
+   padding: 100px;
+   margin: 30px 100px;
+}
+select {
+    padding: 10px 100px;
+    margin: 0px 5px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
