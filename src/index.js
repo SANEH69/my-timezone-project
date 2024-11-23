@@ -1,17 +1,9 @@
-function currentDate(event) {
-    let parisDate = moment().tz("Europe/Paris").format("dddd, MMMM Do, YYYY h:m A");
-    if (event.target.value = "paris") {
-        alert(`It is ${parisDate} in Europe/Paris`);
-    }
-    let tokyoDate = moment().tz("Asia/Tokyo").format("dddd, MMMM Do, YYYY h:m A");
-    if (event.target.value = "tokyo") {
-        alert(`It is ${tokyoDate} in Asia/Tokyo`);
-    }
-    let sydneyDate = moment().tz("Australia/Sydney").format("dddd, MMMM Do, YYYY h:m A");
-    if (event.target.value = "sydney") {
-        alert(`It is ${sydneyDate} in Australia/Sydney`);
+function showDate(event) {
+    if (event.target.value.length > 0) {
+        let currentDate = moment().tz(event.target.value).format("dddd, MMMM Do, YYYY h:m A");
+        alert(`It is ${currentDate} in ${event.target.value}`);
     }
 }
 
 let citiesSelect = document.querySelector("#cities");
-citiesSelect.addEventListener("change", currentDate);
+citiesSelect.addEventListener("change", showDate);
