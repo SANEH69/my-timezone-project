@@ -11,12 +11,19 @@
 <body class="outer">
     <div class="inner">
         <h1>Clock Application</h1>
+        <p class="name" id="name"> Hello, User...</p>
         <select for="cities" id="cities" class="cities">
             <option value="">Search a city...</option>
             <option value="Europe/Paris" id="paris">Paris</option>
             <option value="Asia/Tokyo" id="tokyo">Tokyo</option>
             <option value="Australia/Sydney" id="sydney">Sydney</option>
+            <option value="South Africa/ Durban" id="durban"> Durban</option>
         </select>
+        <div class="date-city">
+            <div class="city" id="city"></div>
+            <div class="date" id="date"></div>
+            <div class="time" id="time"></div>
+        </div>
     </div>
 
     <script src="src/index.js"></script>
