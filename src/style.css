@@ -1,16 +1,36 @@
 .outer {
-   background-color: lavender;
+   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/422/original/A1P6YQ39ApL.png?1732558583");
 }
 .inner {
-   background-color: beige;
+   background-color: rgb(245, 245, 239);
    border: 1px solid transparent;
    border-radius: 20px;
    padding: 100px;
-   margin: 30px 100px;
+   display: block;
+   margin: 40px auto;
+   width: 30%;
+}
+h1 {
+   text-align: center;
+   margin: 0px auto;
 }
 select {
-    padding: 10px 100px;
-    margin: 0px 5px;
+    padding: 10px 150px;
+    display: block;
+    margin: 0px auto;
     border: 1px solid transparent;
     border-radius: 10px;
+}
+.name {
+   font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+   font-weight: 900;
+   color: #001025;
+}
+.city {
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 30px;
+   font-weight: bold;
+   color: #001025;
+   margin: 10px auto;
 }
