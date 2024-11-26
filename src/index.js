@@ -1,7 +1,20 @@
 let name = prompt("What is your name?");
-let localTimeZone = moment.tz.guess();
 let username = document.querySelector("#name");
 username.innerHTML = `Hello, ${name}.`;
+
+function showCurrentTime() {
+    let durbanElement = document.querySelector("#durban");
+    if (durbanElement) {
+     let durbanDate = document.querySelector(".date");
+     let durbanTime = document.querySelector(".time");
+     let durbanCurrentTime = moment().tz("Africa/Johannesburg");
+
+     durbanTime.innerHTML = durbanCurrentTime.format("hh:mm:ss [<small>]A[</small>]");
+     durbanDate.innerHTML = durbanCurrentTime.format("dddd, MMMM Do, YYYY");
+    }
+}
+showCurrentTime();
+setInterval(showCurrentTime, 1000);
 
 function showDate(event) {
     if (event.target.value.length > 0) {
