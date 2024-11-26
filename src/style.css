@@ -9,13 +9,14 @@
    display: block;
    margin: 40px auto;
    width: 30%;
+   box-shadow: black;
 }
 h1 {
    text-align: center;
    margin: 0px auto;
 }
 select {
-    padding: 10px 200px;
+    padding: 10px 180px;
     display: block;
     margin: 10px auto;
     border: 1px solid transparent;
