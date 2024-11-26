@@ -1,7 +1,7 @@
 let name = prompt("What is your name?");
 let localTimeZone = moment.tz.guess();
 let username = document.querySelector("#name");
-username.innerHTML = `Hello, ${name}. Your local timezone is ${localTimeZone} and the current time is ${moment().format("h:mm:ss A")}.`;
+username.innerHTML = `Hello, ${name}.`;
 
 function showDate(event) {
     if (event.target.value.length > 0) {
