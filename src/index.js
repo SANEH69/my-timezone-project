@@ -5,8 +5,8 @@ username.innerHTML = `Hello, ${name}.`;
 function showCurrentTime() {
     let durbanElement = document.querySelector("#durban");
     if (durbanElement) {
-     let durbanDate = document.querySelector(".date");
-     let durbanTime = document.querySelector(".time");
+     let durbanDate = durbanElement.querySelector(".date");
+     let durbanTime = durbanElement.querySelector(".time");
      let durbanCurrentTime = moment().tz("Africa/Johannesburg");
 
      durbanTime.innerHTML = durbanCurrentTime.format("hh:mm:ss [<small>]A[</small>]");
