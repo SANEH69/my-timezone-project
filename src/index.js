@@ -1,33 +1,34 @@
-let name = prompt("What is your name?");
-let username = document.querySelector("#name");
-username.innerHTML = `Hello, ${name}.`;
+let name = prompt("Hello, what is your name?");
+let userElement = document.querySelector("#name");
+userElement.innerHTML = `Hello, ${name}`;
 
-function showCurrentTime() {
+function updateTime() {
+    // durban
     let durbanElement = document.querySelector("#durban");
     if (durbanElement) {
-     let durbanDate = durbanElement.querySelector(".date");
-     let durbanTime = durbanElement.querySelector(".time");
-     let durbanCurrentTime = moment().tz("Africa/Johannesburg");
-
-     durbanTime.innerHTML = durbanCurrentTime.format("hh:mm:ss [<small>]A[</small>]");
-     durbanDate.innerHTML = durbanCurrentTime.format("dddd, MMMM Do, YYYY");
+      let durbanDate = document.querySelector("#durban .date");
+      let durbanTime = document.querySelector("#durban .time");
+      let durbanTimeZone = moment().tz("Africa/Johannesburg");
+  
+      durbanTime.innerHTML = durbanTimeZone.format(
+        "h:mm:ss [<small>]A[</small>]"
+      );
+      durbanDate.innerHTML = durbanTimeZone.format("MMMM Do, YYYY");
     }
-}
-showCurrentTime();
-setInterval(showCurrentTime, 1000);
-
-function showDate(event) {
-    if (event.target.value.length > 0) {
-        let currentDate = moment().tz(event.target.value).format("dddd, MMMM Do, YYYY");
-        let currentTime = moment(). tz(event.target.value).format("hh:mm:ss A");
-        let cityElement = document.querySelector(".city");
-        let dateElement = document.querySelector("#date");
-        let timeElement = document.querySelector("#time");
-        cityElement.innerHTML = `${event.target.value}`;
-        dateElement.innerHTML = `${currentDate}`;
-        timeElement.innerHTML = `${currentTime}`;
+  
+    // detroit
+    let detroitElement = document.querySelector("#detroit");
+    if (detroitElement) {
+      let detroitDate = document.querySelector("#detroit .date");
+      let detroitTime = document.querySelector("#detroit .time");
+      let detroitTimeZone = moment().tz("America/Detroit");
+  
+      detroitDate.innerHTML = detroitTimeZone.format("MMMM Do,YYYY");
+      detroitTime.innerHTML = detroitTimeZone.format(
+        "h:mm:ss [<small>]A[</small>]"
+      );
     }
-}
+  }
 
-let citiesSelect = document.querySelector("#cities");
-citiesSelect.addEventListener("change", showDate);
+ updateTime();
+ setInterval(updateTime, 1000);
