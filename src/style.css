@@ -16,10 +16,10 @@ h1 {
    margin: 0px auto;
 }
 select {
-    padding: 10px 180px;
+    padding: 10px 150px;
     display: block;
     margin: 10px auto;
-    border: 1px solid transparent;
+    border: 1px solid #001025 ;
     border-radius: 10px;
 }
 .name {
