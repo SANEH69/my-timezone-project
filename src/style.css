@@ -36,7 +36,7 @@ select {
    color: #001025;
    margin: 10px auto;
 }
-.date-city {
+.location {
    display: flex;
    justify-content: flex-end;
 }
