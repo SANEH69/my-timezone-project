@@ -1,6 +1,6 @@
 let name = prompt("Hello, what is your name?");
 let userElement = document.querySelector("#name");
-userElement.innerHTML = `Hello, ${name}`;
+userElement.innerHTML = `Hello, ${name}.`;
 
 function updateTime() {
     // durban
